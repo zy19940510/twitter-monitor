@@ -1,0 +1,31 @@
+# Twitter Monitor Dependencies
+#
+# 核心依赖说明:
+# - LangChain: 用于构建 LangGraph 工作流和 LLM 集成
+# - LangGraph: 工作流状态机引擎
+# - OpenAI SDK: 用于调用兼容 OpenAI API 的各种 LLM 提供商
+# - python-dotenv: 用于加载 .env 环境变量
+# - requests: 用于 Telegram Bot API 推送
+#
+# 注意: 本项目使用 agent-browser 进行浏览器自动化
+# agent-browser 需要单独安装: npm install -g @browserbase/agent-browser
+
+# LangChain 核心组件
+langchain>=0.3.0
+langchain-core>=0.3.0
+
+# LangChain LLM Provider 集成
+langchain-openai>=0.2.0    # 支持 OpenAI, Anthropic 等兼容接口
+langchain-ollama>=0.2.0    # 支持 Ollama 本地模型（可选）
+
+# LangGraph (工作流引擎)
+langgraph>=0.2.0
+
+# OpenAI SDK (用于 SimpleLLM，支持多 Provider)
+openai>=1.0.0
+
+# HTTP 请求 (Telegram 推送)
+requests>=2.31.0
+
+# 环境变量加载
+python-dotenv>=1.0.0
